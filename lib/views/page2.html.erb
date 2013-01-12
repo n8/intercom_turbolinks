@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello</title>
+    <style type="text/css" media="screen">
+      body {
+        background-color: #4B7399;
+        font-family: Verdana;
+        font-size: 14px;
+      }
+
+      #container {
+        width: 75%;
+        margin: 0 auto;
+        background-color: #FFF;
+        padding: 20px 40px;
+        border: solid 1px #black;
+        margin-top: 20px;
+      }
+      a { color: #0000FF; }
+    </style>
+
+    <script src="/javascripts/turbolinks.js"></script>
+    <script src="https://api.intercom.io/api/js/library.js"></script>
+
+    <script id="IntercomSettingsScriptTag">
+      var data = {
+        // TODO: The current logged in user's email address.
+        email: "intercomSettings@example.com",
+        // TODO: The current logged in user's sign-up date as a Unix timestamp.
+        created_at: 1234567890,
+        app_id: "s8w4himm", 
+        widget: {
+          activator: '#Intercom'
+        }, 
+        last_completed_item_at: '<%= Time.now %>'
+      };
+    </script>
+
+
+    
+    <script>
+      window.onload = function(){
+        Intercom('boot', data)
+      }
+    </script>
+
+  </head>
+  <body>
+    <div id="container">
+      <h1>Page 2</h1>
+
+      <a id="Intercom" href="mailto:s8w4himm@incoming.intercom.io">Support</a>
+    </div>
+
+  </body>
+</html>
