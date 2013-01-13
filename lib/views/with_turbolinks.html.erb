@@ -35,6 +35,10 @@
         }, 
         last_completed_item_at: '<%= Time.now %>'
       };
+
+      document.addEventListener('page:change', function(){
+        Intercom('update');
+      }, false);
     </script>
 
 
